@@ -86,16 +86,3 @@ footer {
   font-size: 1.2em;
   color: #00e5ff;
 }
-.image-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 20px;
-}
-
-.image-gallery img {
-  width: 300px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
