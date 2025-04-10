@@ -4,8 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quantum Research Portal</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+ <style>
+    .preview-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .preview-container img {
+      width: 200px;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+  </style>
+  </head>
 <body>
   <header>
     <h1>Quantum Research</h1>
@@ -32,6 +45,24 @@
     </section>
 
   </main>
+ <script>
+    const imageInput = document.getElementById('imageInput');
+    const preview = document.getElementById('preview');
+
+    imageInput.addEventListener('change', () => {
+      preview.innerHTML = ''; // 기존 이미지 제거
+      const files = imageInput.files;
+      for (let i = 0; i < files.length; i++) {
+        const reader = new FileReader();
+        reader.onload = e => {
+          const img = document.createElement('img');
+          img.src = e.target.result;
+          preview.appendChild(img);
+        };
+        reader.readAsDataURL(files[i]);
+      }
+    });
+  </script>
   <footer>
     <p>&copy; 2025 Quantum Research Group</p>
   </footer>
