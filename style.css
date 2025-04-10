@@ -1,39 +1,39 @@
 /* style.css - 다크 모드 테마 */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #121212;
-  color: #e0e0e0;
-  line-height: 1.6;
+본문 {
+ 여백: 0;
+ 폰트 패밀리: '세고 UI', 타호마, 제네바, 베르다나, 산세리프;
+ 배경색: #121212;
+ color: #e0e0e0;
+ 선 높이: 1.6;
 }
-header {
-  background-color: #1f1f1f;
-  padding: 20px;
-  text-align: center;
-  border-bottom: 1px solid #333;
+헤더 {
+ background-color: #1f1f1f;
+ 패딩: 20 px;
+ 텍스트 align: 중심;
+ 경계 바닥: 1 px 솔리드 #333;
 }
-header h1 {
-  margin: 0;
-  font-size: 2em;
-  color: #00bcd4;
+헤더 h1 {
+ 여백: 0;
+ 글꼴 크기: 2em;
+ color: #00bcd4;
 }
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
+navul {
+ 목록 스타일: 없음;
+ 패딩: 0;
+ 디스플레이: 플렉스;
+ 정당화 내용: 중심;
+ 마진 탑: 10 px;
 }
-nav ul li {
-  margin: 0 15px;
+나불리 {
+ 여백: 0 15 px;
 }
-nav ul li a {
-  color: #e0e0e0;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
+navulli a {
+ color: #e0e0e0;
+ 텍스트 장식: 없음;
+ 글꼴 무게: 굵게;
+ 전환: 색상 0.3초;
 }
-nav ul li a:hover {
+nav ul li a:호버 {
  color: #00bcd4;
 }
 메인 {
@@ -55,7 +55,7 @@ nav ul li a:hover {
 .simulator 형태 {
  마진 탑: 30 px;
  디스플레이: 플렉스;
- 플렉스 direction: 열;
+ 플렉스 방향: 열;
  정렬 items: 중심;
  갭: 10 px;
 }
@@ -64,7 +64,7 @@ nav ul li a:hover {
  background-color: #1f1f1f;
  경계: 1 px 솔리드 #333;
  색상: #fff;
- 국경 radius: 5 px;
+ 국경 반지름: 5 px;
  너비: 300 px;
  텍스트 align: 중심;
 }
@@ -74,11 +74,11 @@ nav ul li a:hover {
  패딩: 10 px 20 px;
  색상: #121212;
  글꼴 무게: 굵게;
- 국경 radius: 5 px;
+ 국경 반지름: 5 px;
  커서: 포인터;
  전환: 배경색 0.3초;
 }
-.simulator 양식 버튼:hover {
+.simulator 양식 버튼: hover {
  배경색: #0097a7;
 }
 .result {
@@ -86,22 +86,4 @@ nav ul li a:hover {
  글꼴 크기: 1.2em;
  color: #00e5ff;
 
-.image-wrapper {
- 마진 탑: 12 px;
- 마진 바닥: 24 px;
- 텍스트 align: 중심;
-}
 
-.image-wrapper img {
- 최대 너비: 100%;
- 높이: 자동;
- 국경 radius: 10 px;
- box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.image-wrapper .caption {
- 글꼴 크기: 0.9rem;
- 색상: #666;
- 마진 탑: 8 px;
-}
-  
