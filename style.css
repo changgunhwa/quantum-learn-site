@@ -1,4 +1,4 @@
-/* style.css - Dark Mode Theme */
+/* style.css - 다크 모드 테마 */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -34,73 +34,74 @@ nav ul li a {
   transition: color 0.3s;
 }
 nav ul li a:hover {
-  color: #00bcd4;
+ color: #00bcd4;
 }
-main {
-  padding: 40px 20px;
-  text-align: center;
+메인 {
+ 패딩: 40 px 20 px;
+ 텍스트 align: 중심;
 }
 .intro h2 {
-  font-size: 1.8em;
-  color: #00bcd4;
+ 글꼴 크기: 1.8em;
+ color: #00bcd4;
 }
-footer {
-  background-color: #1f1f1f;
-  text-align: center;
-  padding: 20px;
-  border-top: 1px solid #333;
-  font-size: 0.9em;
-  color: #888;
+바닥글 {
+ background-color: #1f1f1f;
+ 텍스트 align: 중심;
+ 패딩: 20 px;
+ 보더탑: 1 px 솔리드 #333;
+ 글꼴 크기: 0.9em;
+ 색상: #888;
 }
-.simulator-form {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+.simulator 형태 {
+ 마진 탑: 30 px;
+ 디스플레이: 플렉스;
+ 플렉스 direction: 열;
+ 정렬 items: 중심;
+ 갭: 10 px;
 }
-.simulator-form input[type="text"] {
-  padding: 10px;
-  background-color: #1f1f1f;
-  border: 1px solid #333;
-  color: #fff;
-  border-radius: 5px;
-  width: 300px;
-  text-align: center;
+.simulator 양식 입력 [type="text"] {
+ 패딩: 10 px;
+ background-color: #1f1f1f;
+ 경계: 1 px 솔리드 #333;
+ 색상: #fff;
+ 국경 radius: 5 px;
+ 너비: 300 px;
+ 텍스트 align: 중심;
 }
-.simulator-form button {
-  background-color: #00bcd4;
-  border: none;
-  padding: 10px 20px;
-  color: #121212;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.simulator 양식 버튼 {
+ 배경색: #00bcd4;
+ 경계: 없음;
+ 패딩: 10 px 20 px;
+ 색상: #121212;
+ 글꼴 무게: 굵게;
+ 국경 radius: 5 px;
+ 커서: 포인터;
+ 전환: 배경색 0.3초;
 }
-.simulator-form button:hover {
-  background-color: #0097a7;
+.simulator 양식 버튼:hover {
+ 배경색: #0097a7;
 }
 .result {
-  margin-top: 20px;
-  font-size: 1.2em;
-  color: #00e5ff;
+ 마진 탑: 20 px;
+ 글꼴 크기: 1.2em;
+ color: #00e5ff;
 
 .image-wrapper {
-  margin-top: 12px;
-  margin-bottom: 24px;
-  text-align: center;
+ 마진 탑: 12 px;
+ 마진 바닥: 24 px;
+ 텍스트 align: 중심;
 }
 
 .image-wrapper img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+ 최대 너비: 100%;
+ 높이: 자동;
+ 국경 radius: 10 px;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .image-wrapper .caption {
-  font-size: 0.9rem;
-  color: #666;
-  margin-top: 8px;
+ 글꼴 크기: 0.9rem;
+ 색상: #666;
+ 마진 탑: 8 px;
 }
+  
