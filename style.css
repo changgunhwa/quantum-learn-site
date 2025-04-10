@@ -1,0 +1,88 @@
+/* style.css - Dark Mode Theme */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+header {
+  background-color: #1f1f1f;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+header h1 {
+  margin: 0;
+  font-size: 2em;
+  color: #00bcd4;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+nav ul li a:hover {
+  color: #00bcd4;
+}
+main {
+  padding: 40px 20px;
+  text-align: center;
+}
+.intro h2 {
+  font-size: 1.8em;
+  color: #00bcd4;
+}
+footer {
+  background-color: #1f1f1f;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #333;
+  font-size: 0.9em;
+  color: #888;
+}
+.simulator-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.simulator-form input[type="text"] {
+  padding: 10px;
+  background-color: #1f1f1f;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 5px;
+  width: 300px;
+  text-align: center;
+}
+.simulator-form button {
+  background-color: #00bcd4;
+  border: none;
+  padding: 10px 20px;
+  color: #121212;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.simulator-form button:hover {
+  background-color: #0097a7;
+}
+.result {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #00e5ff;
+}
