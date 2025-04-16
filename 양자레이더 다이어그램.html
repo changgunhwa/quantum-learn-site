@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>양자레이더 다이어그램</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 2rem;
+    }
+    .container {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      position: relative;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .block {
+      border: 2px solid #333;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      position: absolute;
+      background: #e9f0ff;
+      font-weight: bold;
+    }
+    /* 개별 블록 위치 */
+    #signal { top: 40px; left: 50px; width: 120px; }
+    #idle { top: 40px; left: 200px; width: 120px; }
+    #source { top: 120px; left: 125px; width: 150px; }
+    #classical { top: 200px; left: 40px; width: 140px; background: #f9f9f9; }
+    #quantum { top: 200px; left: 220px; width: 140px; background: #f9f9f9; }
+    #ratio { top: 250px; left: 180px; width: 80px; background: #fff0f0; }
+    #spinctrl { top: 320px; left: 125px; width: 150px; }
+
+    #microwave { top: 420px; left: 30px; width: 150px; }
+    #antenna { top: 420px; left: 200px; width: 100px; }
+    #plasma { top: 420px; left: 320px; width: 150px; }
+
+    #entanglement { top: 520px; left: 60px; width: 120px; }
+    #spin { top: 520px; left: 200px; width: 80px; }
+    #pair { top: 520px; left: 300px; width: 100px; }
+
+    #decoherence { top: 600px; left: 80px; width: 150px; background: #ffe0e0; }
+    #quantumdot { top: 600px; left: 260px; width: 120px; background: #e0ffe0; }
+
+    /* 선형 연결 화살표는 후속 적용 필요 (SVG나 캔버스 활용 가능) */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="signal" class="block">Signal</div>
+    <div id="idle" class="block">Idle</div>
+    <div id="source" class="block">Signal source</div>
+    <div id="classical" class="block">전파<br>영역</div>
+    <div id="quantum" class="block">양자<br>영역</div>
+    <div id="ratio" class="block">(1 : 100)</div>
+    <div id="spinctrl" class="block">스핀제어</div>
+
+    <div id="microwave" class="block">Microwave</div>
+    <div id="antenna" class="block">안테나</div>
+    <div id="plasma" class="block">플라즈마<br>입자가속</div>
+
+    <div id="entanglement" class="block">양자얽힘</div>
+    <div id="spin" class="block">스핀</div>
+    <div id="pair" class="block">양자쌍</div>
+
+    <div id="decoherence" class="block">디코히어런스</div>
+    <div id="quantumdot" class="block">양자점</div>
+  </div>
+</body>
+</html>
