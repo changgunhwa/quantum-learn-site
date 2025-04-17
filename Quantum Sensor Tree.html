@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quantum Radar Technology</title>
+  <link rel="stylesheet" href="style.css" />
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0e1a1f;
+      color: #e6f0f3;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      animation: fadeInBody 1.5s ease-in;
+    }
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    header {
+      background-color: #122b33;
+      padding: 20px;
+      text-align: center;
+      animation: slideDown 1s ease-out;
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    header h1 {
+      margin: 0;
+      color: #00ffe1;
+    }
+    section {
+      max-width: 960px;
+      margin: auto;
+      padding: 20px;
+      animation: fadeInSection 2s ease-in;
+    }
+    @keyframes fadeInSection {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h2 {
+      color: #00d4ff;
+      border-bottom: 1px solid #00ffe1;
+      padding-bottom: 5px;
+      animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #00ffe1; }
+      to { text-shadow: 0 0 15px #00ffe1; }
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #1c3940;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #1f3c45;
+    }
+    ul li {
+      margin-bottom: 8px;
+      transition: transform 0.3s;
+    }
+    ul li:hover {
+      transform: scale(1.02);
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #122b33;
+      color: #8aa;
+    }
+    .image-container {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #00ffe1;
+      box-shadow: 0 0 10px #00ffe1;
+      animation: fadeInImage 2s ease;
+    }
+    @keyframes fadeInImage {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Quantum Sensor</h1>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Next-Generation Quantum.html">Next-Generation Quantum</a></li>
+        <li><a href="about.html">Current Status</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+      <ul>
+        <li><a href="simulator.html">Simulator</a></li>
+        <li><a href="News.html">News</a></li>
+        <li><a href="Quantum Sensor Tree.html">Quantum Sensor</a></li>
+        
+      </ul>
+    </nav>
+  
+  </header>
+     
+      <main>
+        <section>
+        <div style="text-align: left;">
+          <div id="radar" class="content-section">
+            
+            <h2>양자 레이더</h2>
+            
+            <p><strong>원리:</strong>얽힌 광자쌍 중 하나를 표적에 보냄 (신호광).</p>
+              <li>다른 하나는 보관 (아이들러광).</li>
+              <li>반사된 신호광과 보관 중인 아이들러광의 **양자 상관성(correlation)**을 이용해 표적의 존재 유무, 거리, 속도 등을 감지함.</li>
+              <li>비얽힘 환경에서 얽힘이 파괴되어도 여전히 고전적인 방법보다 더 높은 신호 대 잡음비(SNR) 유지 가능.</li>
+           
+            <p><strong>특징:</strong>잡음에 강함: 높은 열적 잡음 환경에서도 우수한 감지 성능.</p>
+              <li>스텔스 탐지 가능성: 레이더 반사 면적(RCS)이 작은 물체도 감지할 수 있음.</li>
+              <li>비간섭성: 표적에 노출되는 신호 세기가 약하여 군사용 은폐(stealth) 탐지에 적합.</li>
+              <li>양자 얽힘 소멸 후에도 유리함: 양자 얽힘이 깨지더라도 여전히 상관성 유지. </li>
+            
+            <p><strong>응용:</strong>스텔스 비행체 감지: RCS가 낮은 항공기, 드론, 잠수함 등의 탐지.</p>
+              <li>군사 및 국방 감시: 높은 보안성, 낮은 발각률을 요구하는 정찰 및 감시.</li>
+              <li>저전력 레이더 시스템: 에너지 소비가 적고 탐지 거리를 늘릴 수 있는 미래형 센서.</li>
+              <li>잡음 환경에서의 감지: 고전적 레이더가 성능이 떨어지는 강한 배경 잡음 환경. </li>
+            
+          </div>
+           
+        <div id="nv-magnetometer" class="content-section active">
+          <h2>NV 센터 자력계</h2>
+          <tr>
+          <td><p><strong>원리:</strong> ODMR 기법으로 스핀 상태의 자기장 감지</p></td>
+          <p><strong>특징:</strong> 고해상도, 실온 동작, 나노스케일</p>
+          <p><strong>응용:</strong> 생체 자기 측정, 나노 자기 영상</p>
+          </tr>
+        </div>
+       
+        <div id="nv-electric" class="content-section">
+          <h2>NV 센터 전기장 센서</h2>
+          <p><strong>원리:</strong> 전기장에 의한 스핀 스펙트럼 변화 감지</p>
+          <p><strong>특징:</strong> 국소 전기장 정밀 측정</p>
+          <p><strong>응용:</strong> 바이오센싱, 나노 소자 분석</p>
+        </div>
+    
+        <div id="ryd-electric" class="content-section">
+          <h2>Rydberg 전기장 센서</h2>
+          <p><strong>원리:</strong> Stark shift 기반 전기장 감지</p>
+          <p><strong>특징:</strong> 고감도, 넓은 대역</p>
+          <p><strong>응용:</strong> 고전압 환경, 통신 신호 감지</p>
+        </div>
+    
+        <div id="ryd-mw" class="content-section">
+          <h2>Rydberg 마이크로파 / RF 센서</h2>
+          <p><strong>원리:</strong> 마이크로파로 Rydberg 상태 전이 유도</p>
+          <p><strong>특징:</strong> GHz~THz 대역, 비침습</p>
+          <p><strong>응용:</strong> 통신 탐지, 스텔스 감지</p>
+        </div>
+    
+        <div id="ryd-magnetometer" class="content-section">
+          <h2>Rydberg 자기장 센서</h2>
+          <p><strong>원리:</strong> Zeeman 효과 기반 자기장 감지</p>
+          <p><strong>특징:</strong> 고감도, 비접촉</p>
+          <p><strong>응용:</strong> 자기공명, 자기장 맵핑</p>
+        </div>
+    
+        <div id="ryd-antenna" class="content-section">
+          <h2>양자 안테나</h2>
+          <p><strong>원리:</strong> 전자기파를 Rydberg 원자로 직접 감지</p>
+          <p><strong>특징:</strong> 위상/진폭 측정, 넓은 대역</p>
+          <p><strong>응용:</strong> 양자 통신, 고해상도 스펙트럼</p>
+        </div>
+    
+        <div id="ryd-phase" class="content-section">
+          <h2>주파수 및 위상 센서</h2>
+          <p><strong>원리:</strong> 양자 비선형성으로 위상 차 감지</p>
+          <p><strong>특징:</strong> 고해상도 위상 분석</p>
+          <p><strong>응용:</strong> 위상기반 레이더, 통신 분석</p>
+        </div>
+    
+        <div id="atom-interferometers" class="content-section">
+          <h2>중력/가속도/자이로계</h2>
+          <p><strong>원리:</strong> 냉각 원자와 간섭계로 위상차 측정</p>
+          <p><strong>특징:</strong> 절대값 측정, 고정밀</p>
+          <p><strong>응용:</strong> 항법, 지질 탐사</p>
+        </div>
+    
+        <div id="atom-clock" class="content-section">
+          <h2>시계형 간섭계</h2>
+          <p><strong>원리:</strong> 원자시계 정밀도를 간섭계에 결합</p>
+          <p><strong>특징:</strong> 초정밀 시간측정</p>
+          <p><strong>응용:</strong> GPS 대체, 정밀 동기화</p>
+        </div>
+    
+        <div id="squid" class="content-section">
+          <h2>SQUID</h2>
+          <p><strong>원리:</strong> Josephson junction의 위상 변화 측정</p>
+          <p><strong>특징:</strong> 초고감도, 극저온 필요</p>
+          <p><strong>응용:</strong> 뇌파 측정, 자기장 분석</p>
+        </div>
+    
+        <div id="illumination" class="content-section">
+          <h2>양자 일루미네이션 센서</h2>
+          <p><strong>원리:</strong> 얽힘 광자쌍을 이용한 대상 탐지</p>
+          <p><strong>특징:</strong> 노이즈 환경에 강함</p>
+          <p><strong>응용:</strong> 양자 레이더, 감시</p>
+        </div>
+    
+        <div id="squeezed" class="content-section">
+          <h2>스퀴즈드 광 센서</h2>
+          <p><strong>원리:</strong> 양자 잡음 억제 상태로 정밀 측정</p>
+          <p><strong>특징:</strong> 샷노이즈 이하 측정</p>
+          <p><strong>응용:</strong> 중력파 검출, 정밀 광학</p>
+        </div>
+    
+        <div id="gyro" class="content-section">
+          <h2>양자 광학 자이로스코프</h2>
+          <p><strong>원리:</strong> Sagnac 효과를 이용한 회전 감지</p>
+          <p><strong>특징:</strong> 기계적 부하 없음, 고정밀</p>
+          <p><strong>응용:</strong> 항법, 위성 자세 측정</p>
+        </div>
+    
+        <div id="imaging" class="content-section">
+          <h2>양자 이미징 / 홀로그래피</h2>
+          <p><strong>원리:</strong> 얽힘 기반 고해상도 이미지</p>
+          <p><strong>특징:</strong> 적은 광자로 고정밀 이미지</p>
+          <p><strong>응용:</strong> 의료 영상, 비파괴 분석</p>
+        </div>
+
+        
+      </div> 
+      </section>
+      </main>
+    
+
+    
+  
+</body>
+</html>
