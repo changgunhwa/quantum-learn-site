@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quantum Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Simulator</h1>
+    <img src="images/quantum_logo.png" alt="Quantum Company Logo" width="100" height="100" /> 
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Next-Generation Quantum.html">Next-Generation Quantum</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+      <ul>
+        <li><a href="simulator.html">Simulator</a></li>
+        <li><a href="News.html">News</a></li>
+        <li><a href="Quantum Sensor Tree.html">Quantum Sensor</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="intro">
+      <h2>Interactive Quantum Simulator</h2>
+      <form id="simForm" class="simulator-form">
+        <input type="text" id="real" placeholder="Real part (a)" />
+        <input type="text" id="imag" placeholder="Imaginary part (b)" />
+        <button type="submit">Compute Bloch Angles</button>
+      </form>
+      <div id="result" class="result"></div>
+      <div id="canvasContainer" style="margin-top: 30px;"></div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 1206-ho, 196, Gasan digital 1-ro, Geumcheon-gu, SEOUL, KOREA 08502 </p>
+    <p>T 82-2-6670-0021~3, M 82-10-5207-7614</p>
+    <p>E-mail :j680202@naver.com</p>
+    <p>&copy; 2025 Quantum Research Group</p>
+  </footer>
+  <script type="module" src="simulator.js"></script>
+</body>
+</html>
