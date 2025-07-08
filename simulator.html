@@ -26,16 +26,24 @@
     </nav>
   </header>
   <main>
-    <section class="intro">
-      <h2>Interactive Quantum Simulator</h2>
-      <form id="simForm" class="simulator-form">
-        <input type="text" id="real" placeholder="Real part (a)" />
-        <input type="text" id="imag" placeholder="Imaginary part (b)" />
-        <button type="submit">Compute Bloch Angles</button>
-      </form>
-      <div id="result" class="result"></div>
-      <div id="canvasContainer" style="margin-top: 30px;"></div>
-    </section>
+
+
+<head>
+    <title>양자 스텔스 탐지 시뮬레이션</title>
+</head>
+<body>
+    <h1>NIO 이온양자 스텔스 탐지 시뮬레이션</h1>
+    <form id="form" method="POST" action="/simulate" target="result-frame">
+        <label for="Omega">입력: Omega (MHz)</label>
+        <input type="number" id="Omega" name="Omega" step="0.01" value="0.1" required>
+        <button type="submit">시뮬레이션 실행</button>
+    </form>
+
+    <h2>시뮬레이션 결과</h2>
+    <iframe name="result-frame" style="width:600px;height:400px;border:1px solid #ccc;"></iframe>
+</body>
+
+
   </main>
   <footer>
     <p>&copy; 1206-ho, 196, Gasan digital 1-ro, Geumcheon-gu, SEOUL, KOREA 08502 </p>
