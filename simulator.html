@@ -29,13 +29,13 @@
   <header>
     <h1>양자 스텔스 탐지 시뮬레이션</h1>
     <form action="/simulate" method="POST">
-        <label for="Omega">Omega 입력 (기본값: 0.1):</label>
-        <input type="number" id="Omega" name="Omega" step="0.01" value="0.1"><br><br>
+        <li><label for="Omega">Omega 입력 (기본값: 0.1):</label></li>
+        <li><input type="number" id="Omega" name="Omega" step="0.01" value="0.1"><br><br></li>
         
-        <label for="omega_0">omega_0 입력 (기본값: 1.0):</label>
-        <input type="number" id="omega_0" name="omega_0" step="0.1" value="1.0"><br><br>
+        <li><label for="omega_0">omega_0 입력 (기본값: 1.0):</label></li>
+        <li><input type="number" id="omega_0" name="omega_0" step="0.1" value="1.0"><br><br></li>
         
-        <input type="submit" value="시뮬레이션 실행">
+        <li><input type="submit" value="시뮬레이션 실행"></li>
     </form>
     
     <p>시뮬레이션 결과를 이미지로 표시합니다. 결과를 보려면 브라우저에서 /simulate 경로의 응답을 확인하세요.</p>
