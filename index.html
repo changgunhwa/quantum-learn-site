@@ -7,16 +7,24 @@
   <link rel="stylesheet" href="style.css" />
 <style>
  body {  
-  display: flex;
+  /*display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: hidden;
+  overflow: hidden;*/
+   
+   background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
 }
         .logo {
             width: 100px; /* 로고 크기 조정 */
             opacity: 0;
-            filter: brightness(0.5) blur(2px);
+            filter: brightness(0.5) blur(5px);
             animation: brighten 3s ease-in forwards;
         }
         @keyframes brighten {
