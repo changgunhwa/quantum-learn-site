@@ -5,14 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quantum Research Portal</title>
   <link rel="stylesheet" href="style.css" />
-
+<style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .logo {
+            width: 300px; /* 로고 크기 조정 */
+            opacity: 0;
+            filter: brightness(0.5) blur(2px);
+            animation: brighten 3s ease-in forwards;
+        }
+        @keyframes brighten {
+            0% {
+                opacity: 0;
+                filter: brightness(0.5) blur(5px);
+            }
+            100% {
+                opacity: 1;
+                filter: brightness(1.5) blur(0px);
+            }
+        }
   </style>
 </head>
 <body>
     <header>
       <h1>Quantum Research</h1>
     <h2>
-      <img src="images/quantum_logo.png" alt="Quantum Company Logo" width="100" height="100" /> 
+      <img class="quantum logo" src="images/quantum_logo.png" alt="Neon Psi quantum Logo" width="100" height="100" />
+
       <h1>
           ARSENAL 
       </hl>
