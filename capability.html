@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+  
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
   <title>Capability</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
@@ -246,6 +250,33 @@
             }
         }
     </style>
+  
+  <script>
+        // capability 로드 후 캐시 클리어 (추가 보강)
+        async function clearCachesOnLoad() {
+            // 서비스 워커 unregister
+            if ('serviceWorker' in navigator) {
+                const registrations = await navigator.serviceWorker.getRegistrations();
+                for (let reg of registrations) {
+                    await reg.unregister();
+                }
+            }
+            // Cache API 클리어
+            if ('caches' in window) {
+                const cacheNames = await caches.keys();
+                for (let name of cacheNames) {
+                    await caches.delete(name);
+                }
+            }
+            // 리소스 재로드 시도
+            try {
+                await fetch('logo.png', { cache: 'reload', mode: 'same-origin' });
+            } catch (e) {
+                console.warn('Fetch reload failed:', e);
+            }
+        }
+    </script>
+  
 </head>
 <body>
 <header>
@@ -436,6 +467,7 @@
 </div>
 </body>
 </html>
+
 
 
 
