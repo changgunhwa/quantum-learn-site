@@ -14,6 +14,24 @@
     }
   </style>
 </head>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const correctPassword = "1234"; // 🔐 원하는 비밀번호 설정
+      const submitBtn = document.getElementById("submitBtn");
+      const errorMsg = document.getElementById("error");
+      const documents = document.getElementById("documents");
+
+      submitBtn.addEventListener("click", function () {
+        const input = document.getElementById("passwordInput").value;
+        if (input === correctPassword) {
+          documents.classList.remove("hidden");
+          errorMsg.textContent = "";
+        } else {
+          errorMsg.textContent = "Incorrect password.";
+        }
+      }
+    }
+  </script>
 <body>
   <header>
     <h1>Resources</h1>
@@ -62,23 +80,6 @@
     <p>&copy; 2025 Quantum Research Group</p>
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const correctPassword = "1234"; // 🔐 원하는 비밀번호 설정
-      const submitBtn = document.getElementById("submitBtn");
-      const errorMsg = document.getElementById("error");
-      const documents = document.getElementById("documents");
 
-      submitBtn.addEventListener("click", function () {
-        const input = document.getElementById("passwordInput").value;
-        if (input === correctPassword) {
-          documents.classList.remove("hidden");
-          errorMsg.textContent = "";
-        } else {
-          errorMsg.textContent = "Incorrect password.";
-        }
-      }
-    }
-  </script>
 </body>
 </html>
