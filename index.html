@@ -38,6 +38,7 @@
             }
         }
   </style>
+  
   <script>
         // capability 로드 후 캐시 클리어 (추가 보강)
         async function clearCachesOnLoad() {
@@ -57,12 +58,13 @@
             }
             // 리소스 재로드 시도
             try {
-                await fetch('logo.png', { cache: 'reload', mode: 'same-origin' });
+                await fetch('quantum_logo.png', { cache: 'reload', mode: 'same-origin' });
             } catch (e) {
                 console.warn('Fetch reload failed:', e);
             }
         }
     </script>
+  
 </head>
 <body>
     <header>
