@@ -41,8 +41,7 @@ nav ul li a:hover {
 main {
   padding: 40px 20px;
   text-align: center;
-  display: flex;
-  justify-content: center;
+
 }
 .intro h2 {
   font-size: 1.8em;
