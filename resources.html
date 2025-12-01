@@ -142,8 +142,8 @@
       const documents = document.getElementById("documents");
       const passwordInput = document.getElementById("passwordInput");
 
-      // 자바스크립트 오류 수정: addEventListener의 닫는 괄호 } 추가
-      submitBtn.addEventListener("click", function () {
+      // 비밀번호 확인 로직 함수
+      function checkPassword() {
         const input = passwordInput.value;
         if (input === correctPassword) {
           documents.classList.remove("hidden");
@@ -156,8 +156,20 @@
           errorMsg.textContent = "비밀번호가 올바르지 않습니다. (Incorrect password.)";
           passwordInput.value = ""; // 비밀번호 초기화
         }
-      }); // <-- 오류 수정
-    }); // <-- 오류 수정
+      }
+
+      // 1. Submit 버튼 클릭 시 비밀번호 확인
+      submitBtn.addEventListener("click", checkPassword); 
+
+      // 2. 비밀번호 입력 필드에서 Enter 키 입력 시 비밀번호 확인
+      passwordInput.addEventListener("keypress", function(event) {
+        // key code 13은 Enter 키를 의미합니다.
+        if (event.key === 'Enter') { 
+          event.preventDefault(); // 기본 폼 제출 동작 방지
+          checkPassword();
+        }
+      });
+    });
   </script>
 </head>
 
