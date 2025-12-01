@@ -4,13 +4,134 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resources</title>
-  <link rel="stylesheet" href="style.css" />
+  <!-- style.css 파일은 제공되지 않아 인라인 스타일로 대체하여 사용합니다. -->
+  <link rel="stylesheet" href="style.css" /> 
   <style>
+    :root {
+      --primary-color: #007bff;
+      --secondary-color: #6c757d;
+      --light-bg: #f8f9fa;
+      --dark-text: #343a40;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--light-bg);
+      color: var(--dark-text);
+    }
+    header {
+      background-color: white;
+      padding: 1rem 5%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    header h1 {
+      color: var(--primary-color);
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--dark-text);
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background-color 0.2s;
+    }
+    nav a:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    .main {
+      padding: 2rem 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .intro {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+    /* 비밀번호 입력 영역 스타일 */
+    #passwordInput {
+      padding: 10px;
+      border: 1px solid var(--secondary-color);
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+    #submitBtn {
+      padding: 10px 20px;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    #submitBtn:hover {
+      background-color: #0056b3;
+    }
+    /* 문서 목록 컨테이너 (반응형 Grid) */
+    #documents {
+      margin-top: 2rem;
+      display: grid;
+      gap: 20px;
+      /* 모바일에서는 1열, 태블릿 이상에서는 2열, 데스크탑에서는 3열 */
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .document-card {
+      background-color: var(--light-bg);
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s;
+    }
+    .document-card:hover {
+        transform: translateY(-3px);
+    }
+    .document-card-header {
+      padding: 10px;
+      background-color: #e9ecef;
+      font-weight: bold;
+      color: var(--dark-text);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
     iframe {
-      display: none;
+      width: 100%;
+      /* 4:3 비율 유지 (높이/너비) */
+      aspect-ratio: 4 / 3; 
+      border: none;
     }
     .hidden {
       display: none;
+    }
+    /* 푸터 스타일 */
+    footer {
+      text-align: center;
+      padding: 1.5rem 5%;
+      background-color: var(--dark-text);
+      color: var(--light-bg);
+      margin-top: 2rem;
+      font-size: 0.85rem;
+    }
+    footer p {
+      margin: 0.3rem 0;
     }
   </style>
    <script>
@@ -19,24 +140,32 @@
       const submitBtn = document.getElementById("submitBtn");
       const errorMsg = document.getElementById("error");
       const documents = document.getElementById("documents");
+      const passwordInput = document.getElementById("passwordInput");
 
+      // 자바스크립트 오류 수정: addEventListener의 닫는 괄호 } 추가
       submitBtn.addEventListener("click", function () {
-        const input = document.getElementById("passwordInput").value;
+        const input = passwordInput.value;
         if (input === correctPassword) {
           documents.classList.remove("hidden");
           errorMsg.textContent = "";
+          // 비밀번호 입력창과 버튼 숨기기
+          passwordInput.classList.add("hidden");
+          submitBtn.classList.add("hidden");
+          document.querySelector('.intro p').textContent = "문서에 접근할 수 있습니다. 스크롤하여 내용을 확인하세요.";
         } else {
-          errorMsg.textContent = "Incorrect password.";
+          errorMsg.textContent = "비밀번호가 올바르지 않습니다. (Incorrect password.)";
+          passwordInput.value = ""; // 비밀번호 초기화
         }
-      }
-    }
+      }); // <-- 오류 수정
+    }); // <-- 오류 수정
   </script>
 </head>
 
 <body>
   <header>
     <h1>Resources</h1>
-    <img src="images/quantum_logo.png" alt="Quantum Company Logo" width="100" height="100" /> 
+    <!-- 이미지는 로컬 파일 경로이므로 임시로 이미지 플레이스홀더를 사용합니다. -->
+    <img src="https://placehold.co/100x100/007bff/ffffff?text=LOGO" alt="Quantum Company Logo" width="100" height="100" style="border-radius: 50%;" /> 
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -54,22 +183,52 @@
     </nav>
   </header>
 
-  <main>
+  <main class="main">
     <section class="intro">
       <h2>Protected Resources</h2>
-      <p>Please enter the password to access documents.</p>
+      <p>문서에 접근하려면 비밀번호를 입력해 주세요.</p>
 
       <input type="password" id="passwordInput" placeholder="Enter password" />
       <button id="submitBtn">Submit</button>
-      <p id="error" style="color: red;"></p>
+      <p id="error" style="color: red; margin-top: 10px;"></p>
 
       <div id="documents" class="hidden">
-        <iframe src="docs/민군협력 R&D 기술교류회 제안서.pdf" width="30%" height="400px"></iframe>
-        <iframe src="docs/호반넥스트 발표자료.pdf" width="30%" height="400px"></iframe>
-        <iframe src="docs/호반넥스트 참가신청서.pdf" width="30%" height="400px"></iframe>
-        <iframe src="docs/아스날 회사소개서.pdf" width="30%" height="400px"></iframe>
-        <iframe src="docs/인천중장년기술창업센터 입주신청서.pdf" width="30%" height="400px"></iframe>
-        <iframe src="docs/[아스날]_2025_H-온드림_인큐베이팅 트랙_지원서_정건화.pdf" width="30%" height="400px"></iframe>
+        
+        <!-- 문서 카드 1 -->
+        <div class="document-card">
+            <div class="document-card-header">민군협력 R&D 기술교류회 제안서</div>
+            <iframe src="docs/민군협력 R&D 기술교류회 제안서.pdf" title="기술교류회 제안서"></iframe>
+        </div>
+
+        <!-- 문서 카드 2 -->
+        <div class="document-card">
+            <div class="document-card-header">호반넥스트 발표자료</div>
+            <iframe src="docs/호반넥스트 발표자료.pdf" title="호반넥스트 발표자료"></iframe>
+        </div>
+
+        <!-- 문서 카드 3 -->
+        <div class="document-card">
+            <div class="document-card-header">호반넥스트 참가신청서</div>
+            <iframe src="docs/호반넥스트 참가신청서.pdf" title="호반넥스트 참가신청서"></iframe>
+        </div>
+
+        <!-- 문서 카드 4 -->
+        <div class="document-card">
+            <div class="document-card-header">아스날 회사소개서</div>
+            <iframe src="docs/아스날 회사소개서.pdf" title="아스날 회사소개서"></iframe>
+        </div>
+
+        <!-- 문서 카드 5 -->
+        <div class="document-card">
+            <div class="document-card-header">인천중장년기술창업센터 입주신청서</div>
+            <iframe src="docs/인천중장년기술창업센터 입주신청서.pdf" title="입주신청서"></iframe>
+        </div>
+
+        <!-- 문서 카드 6 -->
+        <div class="document-card">
+            <div class="document-card-header">[아스날]_2025_H-온드림_인큐베이팅 트랙_지원서</div>
+            <iframe src="docs/[아스날]_2025_H-온드림_인큐베이팅 트랙_지원서_정건화.pdf" title="H-온드림 지원서"></iframe>
+        </div>
       </div>
     </section>
   </main>
