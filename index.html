@@ -62,6 +62,16 @@
             } catch (e) {
                 console.warn('Fetch reload failed:', e);
             }
+          // 추가: localStorage와 sessionStorage 클리어
+            localStorage.clear();
+            sessionStorage.clear();
+        }
+    // capability로 이동 (추가: location.reload(true) 시뮬레이션)
+        async function goToCapability() {
+            await clearCachesRobustly(); // 이동 전 홈 자원 클리어
+            const timestamp = new Date().getTime();
+            // capability 페이지로 이동 후 강제 재로드 준비 (URL 버스팅)
+            window.location.href = `capability.html?ver=${timestamp}`;
         }
     </script>
   
