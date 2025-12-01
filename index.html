@@ -38,6 +38,31 @@
             }
         }
   </style>
+  <script>
+        // capability 로드 후 캐시 클리어 (추가 보강)
+        async function clearCachesOnLoad() {
+            // 서비스 워커 unregister
+            if ('serviceWorker' in navigator) {
+                const registrations = await navigator.serviceWorker.getRegistrations();
+                for (let reg of registrations) {
+                    await reg.unregister();
+                }
+            }
+            // Cache API 클리어
+            if ('caches' in window) {
+                const cacheNames = await caches.keys();
+                for (let name of cacheNames) {
+                    await caches.delete(name);
+                }
+            }
+            // 리소스 재로드 시도
+            try {
+                await fetch('logo.png', { cache: 'reload', mode: 'same-origin' });
+            } catch (e) {
+                console.warn('Fetch reload failed:', e);
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
