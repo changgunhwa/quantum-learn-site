@@ -5,6 +5,12 @@ body {
   background-color: #121212;
   color: #e0e0e0;
   line-height: 1.6;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
 }
 header {
   background-color: #1f1f1f;
